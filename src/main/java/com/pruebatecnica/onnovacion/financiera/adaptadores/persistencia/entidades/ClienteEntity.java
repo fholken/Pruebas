@@ -1,6 +1,7 @@
 package com.pruebatecnica.onnovacion.financiera.adaptadores.persistencia.entidades;
 
 import lombok.Data;
+import lombok.ToString;
 
 
 import javax.persistence.*;
@@ -33,6 +34,7 @@ public class ClienteEntity {
     @Column(nullable = false)
     private Date fechaNacimiento;
 
+    @ToString.Exclude
     @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<CuentaEntity> cuenta;
 

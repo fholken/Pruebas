@@ -11,5 +11,6 @@ public class Cuenta {
     private Long idCliente;
     private TipoMoneda tipoMoneda;
     private int saldo;
-    private int numerocuenta;
+    private int numeroCuenta;
+//    private Cliente cliente;
 }

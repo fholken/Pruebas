@@ -16,7 +16,7 @@ import org.mapstruct.factory.Mappers;
 public interface ClienteMapper {
     ClienteMapper INSTANCE = Mappers.getMapper(ClienteMapper.class);
 
-    @Mapping(target = "tipoCliente", source = "cliente.tipoCliente")
+//    @Mapping(target = "tipoCliente", source = "cliente.tipoCliente")
     ClienteEntity dominioToEntity(Cliente cliente);
     Cliente entityToDominio(ClienteEntity cliente);
 }

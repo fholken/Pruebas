@@ -1,6 +1,8 @@
 package com.pruebatecnica.onnovacion.financiera.adaptadores.persistencia.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -14,10 +16,11 @@ public class CuentaEntity {
     @Id
     @Column(unique = true)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer numeroCuenta;
+    private int numeroCuenta;
 
     private String tipoMoneda;
 
+//    @ToString.Exclude
     @ManyToOne
     @JoinColumn(name = "idCliente")
     private ClienteEntity cliente;
@@ -25,6 +28,7 @@ public class CuentaEntity {
     @Column(nullable = true)
     private int saldo;
 
+    @ToString.Exclude
     @OneToMany(mappedBy = "cuenta")
     private List<MovimientoEntity> movimiento;
 

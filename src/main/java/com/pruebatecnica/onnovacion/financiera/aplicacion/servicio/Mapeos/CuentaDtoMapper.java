@@ -15,6 +15,9 @@ import org.mapstruct.factory.Mappers;
 public interface CuentaDtoMapper {
     CuentaDtoMapper INSTANCE = Mappers.getMapper(CuentaDtoMapper.class);
 
-    @Mapping(target = "numerocuenta", ignore = true)
+    @Mapping(target = "cuentaDto.numeroCuenta", ignore = true)
+//    @Mapping(target = "cliente", ignore = true)
     Cuenta dtoToDominio(CuentaDto cuentaDto);
+
+    CuentaDto dominioToDto1(Cuenta cuenta);
 }

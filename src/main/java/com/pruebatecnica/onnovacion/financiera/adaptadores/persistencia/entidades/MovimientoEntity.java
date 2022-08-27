@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @Table(name = "movimientos")
@@ -19,6 +20,9 @@ public class MovimientoEntity {
     private CuentaEntity cuenta;
 
     private int valorMovimiento;
+    private Date fechaMovimiento;
+    private Boolean tipomovimiento;
+
 
 
 }
