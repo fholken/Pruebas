@@ -33,7 +33,7 @@ public class ClienteEntity {
     @Column(nullable = false)
     private Date fechaNacimiento;
 
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<CuentaEntity> cuenta;
 
 

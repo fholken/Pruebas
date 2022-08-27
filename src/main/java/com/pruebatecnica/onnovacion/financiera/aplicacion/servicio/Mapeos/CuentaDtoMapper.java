@@ -4,6 +4,7 @@ import com.pruebatecnica.onnovacion.financiera.adaptadores.web.Dto.CuentaDto;
 import com.pruebatecnica.onnovacion.financiera.dominio.modelo.Cuenta;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
@@ -14,5 +15,6 @@ import org.mapstruct.factory.Mappers;
 public interface CuentaDtoMapper {
     CuentaDtoMapper INSTANCE = Mappers.getMapper(CuentaDtoMapper.class);
 
+    @Mapping(target = "numerocuenta", ignore = true)
     Cuenta dtoToDominio(CuentaDto cuentaDto);
 }

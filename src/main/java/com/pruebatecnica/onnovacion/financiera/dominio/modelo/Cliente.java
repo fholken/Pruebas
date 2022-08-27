@@ -19,7 +19,7 @@ public class Cliente {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date fechaNacimiento;
 
-    private List<Cuenta> cuentas;
+    private List<Cuenta> cuenta;
 
 
 }

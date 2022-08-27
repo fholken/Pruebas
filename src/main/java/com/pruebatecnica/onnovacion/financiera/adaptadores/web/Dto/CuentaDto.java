@@ -15,4 +15,5 @@ public class CuentaDto {
     private Long idCliente;
     private String tipoMoneda;
     private int saldo;
+    private int numerocuenta;
 }
