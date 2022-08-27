@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -17,4 +18,5 @@ public class CuentaDto {
     private int saldo;
     private int numeroCuenta;
 //    private ClienteDto cliente;
+    private List<MovimientoDto> movimiento;
 }

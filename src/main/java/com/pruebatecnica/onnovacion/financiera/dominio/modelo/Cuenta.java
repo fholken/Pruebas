@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 
 @Data
@@ -14,6 +15,7 @@ public class Cuenta {
     private int saldo;
     private int numeroCuenta;
 //    private Cliente cliente;
+    private List<Movimiento> movimiento;
 
     public int validarTipocuenta(int saldo, String moneda){
         if (moneda == "PESO" && saldo <= 1000000){

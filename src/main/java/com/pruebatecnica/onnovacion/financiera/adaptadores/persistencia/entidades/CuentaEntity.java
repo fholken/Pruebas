@@ -2,13 +2,16 @@ package com.pruebatecnica.onnovacion.financiera.adaptadores.persistencia.entidad
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Data
+@Setter
+@Getter
 @Table(name = "cuentas")
 @Entity
 public class CuentaEntity {
@@ -28,8 +31,9 @@ public class CuentaEntity {
     @Column(nullable = true)
     private int saldo;
 
+//    @ToString.Exclude
+    @OneToMany(mappedBy = "cuenta", cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @ToString.Exclude
-    @OneToMany(mappedBy = "cuenta")
     private List<MovimientoEntity> movimiento;
 
 }

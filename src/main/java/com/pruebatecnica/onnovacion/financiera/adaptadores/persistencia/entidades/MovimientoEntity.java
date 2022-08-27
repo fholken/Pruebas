@@ -1,12 +1,15 @@
 package com.pruebatecnica.onnovacion.financiera.adaptadores.persistencia.entidades;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Data
+@Setter
+@Getter
 @Table(name = "movimientos")
 @Entity
 public class MovimientoEntity {

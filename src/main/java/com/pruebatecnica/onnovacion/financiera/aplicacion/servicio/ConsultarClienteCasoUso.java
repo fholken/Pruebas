@@ -15,6 +15,6 @@ public class ConsultarClienteCasoUso implements ConsultarClientePuertoEntrada {
     @Override
     public Cliente consultarCliente(Long id) {
 
-        return ClienteMapper.INSTANCE.entityToDominio(consultarClientePuertoSalida.consultarCliente(id));
+        return ClienteMapper.INSTANCE.entityToDominio1(consultarClientePuertoSalida.consultarCliente(id));
     }
 }

@@ -16,7 +16,7 @@ public interface CuentaDtoMapper {
     CuentaDtoMapper INSTANCE = Mappers.getMapper(CuentaDtoMapper.class);
 
     @Mapping(target = "cuentaDto.numeroCuenta", ignore = true)
-//    @Mapping(target = "cliente", ignore = true)
+    @Mapping(target = "cuentaDto.movimiento", ignore = true)
     Cuenta dtoToDominio(CuentaDto cuentaDto);
 
     CuentaDto dominioToDto1(Cuenta cuenta);

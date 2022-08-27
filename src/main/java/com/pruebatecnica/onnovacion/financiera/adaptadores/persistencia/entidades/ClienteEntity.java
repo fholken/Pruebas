@@ -1,6 +1,8 @@
 package com.pruebatecnica.onnovacion.financiera.adaptadores.persistencia.entidades;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 
@@ -8,7 +10,8 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-@Data
+@Setter
+@Getter
 @Table(name = "clientes")
 @Entity
 public class ClienteEntity {
@@ -34,8 +37,9 @@ public class ClienteEntity {
     @Column(nullable = false)
     private Date fechaNacimiento;
 
+//    @ToString.Exclude
+    @OneToMany(mappedBy = "cliente", cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @ToString.Exclude
-    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<CuentaEntity> cuenta;
 
 

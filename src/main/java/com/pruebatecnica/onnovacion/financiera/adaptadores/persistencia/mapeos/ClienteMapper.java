@@ -18,5 +18,5 @@ public interface ClienteMapper {
 
 //    @Mapping(target = "tipoCliente", source = "cliente.tipoCliente")
     ClienteEntity dominioToEntity(Cliente cliente);
-    Cliente entityToDominio(ClienteEntity cliente);
+    Cliente entityToDominio1(ClienteEntity cliente);
 }

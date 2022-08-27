@@ -18,7 +18,7 @@ public interface CuentaMapper {
     CuentaMapper INSTANCE = Mappers.getMapper(CuentaMapper.class);
 
     @Mapping(target = "cuenta.numeroCuenta", ignore = true)
-//    @Mapping(target = "cuenta.cliente", ignore = true)
+    @Mapping(target = "cuenta.movimiento", ignore = true)
     CuentaEntity dominioToEntity(Cuenta cuenta);
 
 
