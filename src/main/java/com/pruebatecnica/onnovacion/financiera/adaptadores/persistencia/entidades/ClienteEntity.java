@@ -23,12 +23,13 @@ public class ClienteEntity {
     @Column(nullable = true)
     private String apellido;
 
-    private int idTipoDocumento;
+    @Column(name = "tipo_cliente")
+    private String tipoCliente;
 
     @Column(name="numero_documento", nullable = false)
     private int numeroDocumento;
 
-    @Temporal(TemporalType.DATE)
+//    @Temporal(TemporalType.DATE)
     @Column(nullable = false)
     private Date fechaNacimiento;
 

@@ -18,7 +18,7 @@ public class MovimientoEntity {
     @JoinColumn(name = "numeroCuenta")
     private CuentaEntity cuenta;
 
-    private BigDecimal valorMovimiento;
+    private int valorMovimiento;
 
 
 }

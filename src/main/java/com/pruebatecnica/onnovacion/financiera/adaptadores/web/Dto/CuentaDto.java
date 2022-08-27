@@ -1,4 +1,4 @@
-package com.pruebatecnica.onnovacion.financiera.adaptadores.web;
+package com.pruebatecnica.onnovacion.financiera.adaptadores.web.Dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,5 +14,5 @@ import java.math.BigDecimal;
 public class CuentaDto {
     private Long idCliente;
     private String tipoMoneda;
-    private BigDecimal saldo;
+    private int saldo;
 }

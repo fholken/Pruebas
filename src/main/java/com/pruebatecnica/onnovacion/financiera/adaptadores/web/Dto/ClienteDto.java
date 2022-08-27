@@ -1,4 +1,4 @@
-package com.pruebatecnica.onnovacion.financiera.adaptadores.web;
+package com.pruebatecnica.onnovacion.financiera.adaptadores.web.Dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

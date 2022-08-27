@@ -1,5 +1,6 @@
 package com.pruebatecnica.onnovacion.financiera.adaptadores.web;
 
+import com.pruebatecnica.onnovacion.financiera.adaptadores.web.Dto.ClienteDto;
 import com.pruebatecnica.onnovacion.financiera.aplicacion.puerto.CreacionClientePuertoEntrada;
 import com.pruebatecnica.onnovacion.financiera.aplicacion.servicio.Mapeos.ClienteDtoMapper;
 import lombok.RequiredArgsConstructor;

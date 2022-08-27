@@ -18,14 +18,8 @@ public class Cliente {
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date fechaNacimiento;
-    private int tipoDocumento;
+
     private List<Cuenta> cuentas;
 
-    public void validarTipoCliente(){
-        if (this.tipoCliente.equals(TipoCliente.NATURAL)){
-            this.tipoDocumento = 1;
-        }else {
-            this.tipoDocumento = 2;
-        }
-    }
+
 }

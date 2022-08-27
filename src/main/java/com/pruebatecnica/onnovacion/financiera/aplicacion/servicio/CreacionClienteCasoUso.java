@@ -14,7 +14,6 @@ public class CreacionClienteCasoUso implements CreacionClientePuertoEntrada {
     private final CreacionClientePuertoSalida creacionClientePuertoSalida;
     @Override
     public void crearCliente(Cliente cliente) {
-        cliente.validarTipoCliente();
         creacionClientePuertoSalida.crearCliente(ClienteMapper.INSTANCE.dominioToEntity(cliente));
     }
 }

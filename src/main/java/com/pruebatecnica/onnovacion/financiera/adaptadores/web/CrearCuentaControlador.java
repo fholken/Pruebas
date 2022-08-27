@@ -1,5 +1,6 @@
 package com.pruebatecnica.onnovacion.financiera.adaptadores.web;
 
+import com.pruebatecnica.onnovacion.financiera.adaptadores.web.Dto.CuentaDto;
 import com.pruebatecnica.onnovacion.financiera.aplicacion.puerto.CreacionCuentaPuertoEntrada;
 import com.pruebatecnica.onnovacion.financiera.aplicacion.servicio.Mapeos.CuentaDtoMapper;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +19,7 @@ public class CrearCuentaControlador {
     private final CreacionCuentaPuertoEntrada creacionCuentaPuertoEntrada;
 
     @PostMapping(
-            value = "/cliente/crearCuenta",
+            value = "/cuenta/crearCuenta",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<Object> crearCuenta(@RequestBody CuentaDto cuentaDto){

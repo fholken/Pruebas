@@ -13,16 +13,17 @@ public class CuentaEntity {
 
     @Id
     @Column(unique = true)
-    private int numeroCuenta;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer numeroCuenta;
 
-    private int idTipoMoneda;
+    private String tipoMoneda;
 
     @ManyToOne
     @JoinColumn(name = "idCliente")
     private ClienteEntity cliente;
 
     @Column(nullable = true)
-    private BigDecimal saldo;
+    private int saldo;
 
     @OneToMany(mappedBy = "cuenta")
     private List<MovimientoEntity> movimiento;
