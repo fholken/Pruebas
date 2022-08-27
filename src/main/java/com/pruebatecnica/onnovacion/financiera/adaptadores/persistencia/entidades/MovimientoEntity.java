@@ -21,7 +21,7 @@ public class MovimientoEntity {
 
     private int valorMovimiento;
     private Date fechaMovimiento;
-    private Boolean tipomovimiento;
+    private boolean tipoMovimiento;
 
 
 
